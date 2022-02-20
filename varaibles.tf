@@ -8,10 +8,6 @@ variable "main-region" {
   default = "us-east-2"
 }
 
-variable "worker-region" {
-  type    = string
-  default = "us-west-2"
-}
 
 variable "external_ip" {
   type    = string
@@ -21,4 +17,10 @@ variable "external_ip" {
 variable "infra_env" {
   type        = string
   description = "This is the enviornment"
+}
+
+variable "instance_size" {
+  type        = string
+  description = "the default size of ec2"
+  default     = "t3.small"
 }
