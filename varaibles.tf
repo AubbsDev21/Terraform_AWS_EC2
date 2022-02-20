@@ -5,7 +5,7 @@ variable "profile" {
 
 variable "main-region" {
   type    = string
-  default = "us-east-1"
+  default = "us-east-2"
 }
 
 variable "worker-region" {
@@ -18,3 +18,7 @@ variable "external_ip" {
   default = "0.0.0.0/0"
 }
 
+variable "infra_env" {
+  type        = string
+  description = "This is the enviornment"
+}

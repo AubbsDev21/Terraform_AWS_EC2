@@ -8,3 +8,11 @@ provider "aws" {
   region  = var.worker-region
   alias   = "region-worker"
 }
+
+module "vpc" {
+  source = "./modules/VPC"
+
+  infra_env = var.infra_env
+
+  vpc_cidr = "10.0.0.0/17"
+}
